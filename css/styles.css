@@ -1,0 +1,9 @@
+body {
+  color: #fff;
+  background-color: #2a2a2e;
+}
+
+#main,
+#loading {
+  text-align: center;
+}
