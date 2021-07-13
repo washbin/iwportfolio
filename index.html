@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple portfolio site created utilizing the Github API"
+    />
     <title>My Portfolio Site</title>
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   </head>
   <body>
     <div id="loading">
       Loading...
-      <progress value="50" max="100">70 %</progress>
+      <progress value="50" max="100">50%</progress>
     </div>
     <main id="main" hidden>
-      <img id="profileImage" src="" height="200" width="200" />
+      <img
+        id="profileImage"
+        src=""
+        height="200"
+        width="200"
+        alt="Github Profile Picture"
+      />
       <h3 id="handlename"></h3>
       <p id="status"></p>
       <h4 id="followerList"></h4>
@@ -21,6 +31,8 @@
         <h4>My projects</h4>
         <ul id="projectlist"></ul>
       </div>
+      <h5 id="followerInfo"></h5>
+      <p>Check me on <a id="githubLink" href="">Github</a></p>
     </main>
     <script src="./js/main.js"></script>
   </body>

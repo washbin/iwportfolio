@@ -1,21 +1,20 @@
-// const myrepos = [
-//   { name: "noname", html_url: "#" },
-//   { name: "somename", html_url: "#" },
-// ];
+const githubhandle = "washbin";
 
 const image = document.getElementById("profileImage");
 const handle = document.getElementById("handlename");
 const status = document.getElementById("status");
 const projectlist = document.getElementById("projectlist");
-
-const githubhandle = "washbin";
+const followerInfo = document.getElementById("followerInfo");
+const githubLink = document.getElementById("githubLink");
 
 fetch(`https://api.github.com/users/${githubhandle}`)
   .then((res) => res.json())
   .then((res) => {
     image.src = res["avatar_url"];
-    handle.innerText = res["name"];
-    status.innerText = res["bio"];
+    handle.textContent = res["name"];
+    status.textContent = res["bio"];
+    followerInfo.textContent = `I have been followed by ${res["followers"]} awesome people on github.`;
+    githubLink.href = res["html_url"];
 
     fetch(`${res.repos_url}`)
       .then((data) => data.json())
