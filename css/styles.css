@@ -1,9 +1,14 @@
 body {
-  color: #fff;
+  color: #c6ced6;
   background-color: #2a2a2e;
 }
 
 #main,
 #loading {
   text-align: center;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
 }
